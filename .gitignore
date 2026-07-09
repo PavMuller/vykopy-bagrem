@@ -4,6 +4,9 @@ dist/
 .vercel/
 .vercel/output/
 
+# astro cache
+.astro/
+
 # dependencies
 node_modules/
 
