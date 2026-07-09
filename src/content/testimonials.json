@@ -1,0 +1,24 @@
+{
+  "heading": "Co říkají",
+  "heading_accent": "zákazníci",
+  "items": [
+    {
+      "name": "Martin K.",
+      "location": "Liberec",
+      "text": "Skvělá práce, rychlé jednání a férová cena. Výkop pro přípojku vody udělali za jeden den, terén po sobě uklidili. Rozhodně doporučuji.",
+      "stars": 5
+    },
+    {
+      "name": "Jana & Petr N.",
+      "location": "Český Dub",
+      "text": "Potřebovali jsme upravit terén na zahradě před stavbou. Přijeli rychle, práci odvedli poctivě a cena odpovídala nabídce. Žádná nepříjemná překvapení.",
+      "stars": 5
+    },
+    {
+      "name": "Tomáš R.",
+      "location": "Hodkovice nad Mohelkou",
+      "text": "Výkopy pro kanalizaci i elektřinu najednou, koordinace perfektní. Minirypadlo se dostalo i do úzkého dvora. Profesionální přístup od začátku do konce.",
+      "stars": 5
+    }
+  ]
+}

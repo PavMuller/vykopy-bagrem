@@ -1,0 +1,26 @@
+{
+  "heading": "Jak",
+  "heading_accent": "pracujeme",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Poptávka",
+      "desc": "Zavolejte nebo vyplňte formulář. Popište rozsah prací, lokalitu a termín. Odpovíme do 24 hodin."
+    },
+    {
+      "number": "02",
+      "title": "Prohlídka & nabídka",
+      "desc": "Přijedeme na místo, posoudíme situaci a připravíme přesnou cenovou nabídku. Zdarma a bez závazků."
+    },
+    {
+      "number": "03",
+      "title": "Realizace",
+      "desc": "V dohodnutém termínu přistavíme techniku a provedeme práce. Rychle, poctivě a bez zbytečných průtahů."
+    },
+    {
+      "number": "04",
+      "title": "Předání & úklid",
+      "desc": "Po dokončení uklidíme pracoviště, odvezeme zeminu a předáme vám hotové dílo k vaší spokojenosti."
+    }
+  ]
+}

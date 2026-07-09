@@ -1,0 +1,43 @@
+---
+import data from '../content/testimonials.json';
+---
+<section id="reference" class="py-28 bg-dark">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <span class="section-label">Reference</span>
+      <h2 class="font-display text-5xl md:text-7xl text-white mt-3">
+        {data.heading}<span class="text-accent"> {data.heading_accent}</span>
+      </h2>
+      <span class="divider-accent"></span>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {data.items.map((item) => (
+        <div class="bg-surface border border-white/8 p-8 hover:border-accent/30 transition-all group relative">
+          <!-- Quote mark -->
+          <div class="font-display text-8xl text-accent/10 leading-none absolute top-4 right-6 select-none">"</div>
+
+          <!-- Stars -->
+          <div class="flex gap-1 mb-6">
+            {Array.from({ length: item.stars }).map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent fill-current" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+
+          <p class="text-white/65 leading-relaxed mb-8 relative z-10">"{item.text}"</p>
+
+          <div class="border-t border-white/8 pt-5">
+            <div class="font-bold text-white">{item.name}</div>
+            <div class="text-accent text-xs uppercase tracking-wider mt-0.5">{item.location}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

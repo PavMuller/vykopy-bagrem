@@ -1,0 +1,15 @@
+---
+import data from '../content/stats.json';
+---
+<section class="bg-accent py-14">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-dark/20">
+      {data.items.map((item) => (
+        <div class="text-center lg:px-8">
+          <div class="font-display text-5xl md:text-6xl text-dark leading-none mb-2">{item.value}</div>
+          <div class="text-dark/70 text-sm font-bold uppercase tracking-widest">{item.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

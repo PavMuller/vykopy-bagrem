@@ -1,0 +1,40 @@
+---
+import data from '../content/process.json';
+---
+<section id="jak-pracujeme" class="py-28 bg-dark">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <span class="section-label">Postup spolupráce</span>
+        <h2 class="font-display text-5xl md:text-7xl text-white mt-3">
+          {data.heading}<span class="text-accent"> {data.heading_accent}</span>
+        </h2>
+        <span class="divider-accent"></span>
+      </div>
+      <p class="text-white/40 max-w-xs text-sm leading-relaxed">
+        Od prvního kontaktu po předání hotového díla — jasný a předvídatelný postup.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+      <!-- Connecting line (desktop) -->
+      <div class="absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent hidden lg:block"></div>
+
+      {data.steps.map((step) => (
+        <div class="relative">
+          <!-- Number -->
+          <div class="w-20 h-20 border-2 border-accent bg-dark flex items-center justify-center mb-8 relative z-10">
+            <span class="font-display text-3xl text-accent">{step.number}</span>
+          </div>
+
+          <h3 class="font-display text-2xl text-white mb-4">{step.title}</h3>
+          <p class="text-white/50 leading-relaxed text-sm">{step.desc}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
