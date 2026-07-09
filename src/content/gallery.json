@@ -1,0 +1,36 @@
+{
+  "heading": "Ukázky",
+  "heading_accent": "naší práce",
+  "items": [
+    {
+      "src": "https://images.pexels.com/photos/36957845/pexels-photo-36957845.jpeg?auto=compress&cs=tinysrgb&w=900",
+      "alt": "Výkop základů minirypadlem",
+      "label": "Výkopy základů"
+    },
+    {
+      "src": "https://images.pexels.com/photos/28442180/pexels-photo-28442180.jpeg?auto=compress&cs=tinysrgb&w=900",
+      "alt": "Zemní práce rypadlem a nákladním autem",
+      "label": "Zemní práce"
+    },
+    {
+      "src": "https://images.pexels.com/photos/5125782/pexels-photo-5125782.jpeg?auto=compress&cs=tinysrgb&w=900",
+      "alt": "Terénní úpravy a vyrovnání terénu",
+      "label": "Terénní úpravy"
+    },
+    {
+      "src": "https://images.pexels.com/photos/14651/pexels-photo-14651.jpeg?auto=compress&cs=tinysrgb&w=900",
+      "alt": "Těžká stavební technika na staveništi",
+      "label": "Inženýrské sítě"
+    },
+    {
+      "src": "https://images.pexels.com/photos/35281175/pexels-photo-35281175.jpeg?auto=compress&cs=tinysrgb&w=900",
+      "alt": "Práce na staveništi v terénu",
+      "label": "Výkopy v zástavbě"
+    },
+    {
+      "src": "https://images.pexels.com/photos/19857796/pexels-photo-19857796.jpeg?auto=compress&cs=tinysrgb&w=900",
+      "alt": "Stavební práce a výkopové práce",
+      "label": "Odvoz zeminy"
+    }
+  ]
+}

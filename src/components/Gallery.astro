@@ -1,0 +1,53 @@
+---
+import data from '../content/gallery.json';
+---
+<section class="py-28 bg-surface">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <span class="section-label">Portfolio</span>
+      <h2 class="font-display text-5xl md:text-7xl text-white mt-3">
+        {data.heading}<span class="text-accent"> {data.heading_accent}</span>
+      </h2>
+      <span class="divider-accent"></span>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {data.items.map((item) => (
+        <div class="group relative overflow-hidden aspect-[4/3]">
+          <img
+            src={item.src}
+            alt={item.alt}
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
+          />
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-dark/0 group-hover:bg-dark/60 transition-all duration-300"></div>
+          <!-- Label -->
+          <div class="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <div class="bg-accent inline-block px-3 py-1">
+              <span class="font-display text-dark text-lg">{item.label}</span>
+            </div>
+          </div>
+          <!-- Yellow corner accent -->
+          <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA below gallery -->
+    <div class="text-center mt-12">
+      <p class="text-white/40 mb-6">Chcete vidět více nebo se nezávazně poradit?</p>
+      <a href="#kontakt"
+         class="inline-flex items-center gap-3 bg-accent text-dark font-black text-sm px-8 py-4 uppercase tracking-widest hover:bg-yellow-300 transition-all group">
+        Kontaktujte nás
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
