@@ -1,0 +1,108 @@
+---
+import data from '../content/contact.json';
+---
+<section id="kontakt" class="py-24 bg-dark">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-black uppercase">
+        {data.heading}<span class="text-accent"> {data.heading_accent}</span>
+      </h2>
+      <div class="mt-4 w-16 h-1 bg-accent mx-auto"></div>
+      <p class="mt-6 text-white/55 max-w-xl mx-auto">{data.note}</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+      <!-- Contact info -->
+      <div class="space-y-6">
+        <a href={`tel:${data.phone.replace(/\s/g, '')}`}
+           class="group flex items-center gap-5 p-6 bg-zinc-900 border border-white/10 rounded-xl hover:border-accent/50 transition-all">
+          <div class="flex-shrink-0 w-14 h-14 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-white/40 text-xs uppercase tracking-wider font-bold mb-1">Telefon</div>
+            <div class="text-xl font-black text-white group-hover:text-accent transition-colors">{data.phone}</div>
+          </div>
+        </a>
+
+        <a href={`mailto:${data.email}`}
+           class="group flex items-center gap-5 p-6 bg-zinc-900 border border-white/10 rounded-xl hover:border-accent/50 transition-all">
+          <div class="flex-shrink-0 w-14 h-14 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-white/40 text-xs uppercase tracking-wider font-bold mb-1">E-mail</div>
+            <div class="text-xl font-black text-white group-hover:text-accent transition-colors">{data.email}</div>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-5 p-6 bg-zinc-900 border border-white/10 rounded-xl">
+          <div class="flex-shrink-0 w-14 h-14 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-white/40 text-xs uppercase tracking-wider font-bold mb-1">Lokalita</div>
+            <div class="text-xl font-black text-white">{data.location}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <!-- Pro odesílání formuláře připojte Formspree nebo podobnou službu -->
+      <form
+        class="space-y-5 bg-zinc-900 border border-white/10 rounded-xl p-8"
+        action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+        method="POST"
+      >
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="jmeno" class="block text-xs font-black uppercase tracking-wider text-white/50 mb-2">Jméno *</label>
+            <input
+              type="text" id="jmeno" name="jmeno" required
+              class="w-full bg-dark border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/25 focus:outline-none focus:border-accent transition-colors"
+              placeholder="Jan Novák"
+            />
+          </div>
+          <div>
+            <label for="telefon" class="block text-xs font-black uppercase tracking-wider text-white/50 mb-2">Telefon *</label>
+            <input
+              type="tel" id="telefon" name="telefon" required
+              class="w-full bg-dark border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/25 focus:outline-none focus:border-accent transition-colors"
+              placeholder="+420 777 123 456"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="lokalita" class="block text-xs font-black uppercase tracking-wider text-white/50 mb-2">Lokalita / obec</label>
+          <input
+            type="text" id="lokalita" name="lokalita"
+            class="w-full bg-dark border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/25 focus:outline-none focus:border-accent transition-colors"
+            placeholder="Český Dub, Liberec..."
+          />
+        </div>
+        <div>
+          <label for="zprava" class="block text-xs font-black uppercase tracking-wider text-white/50 mb-2">Popis prací *</label>
+          <textarea
+            id="zprava" name="zprava" required rows="4"
+            class="w-full bg-dark border border-white/15 rounded-lg px-4 py-3 text-white placeholder-white/25 focus:outline-none focus:border-accent transition-colors resize-none"
+            placeholder="Popište rozsah prací, hloubku a termín..."
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-accent text-dark font-black py-4 rounded-lg hover:bg-yellow-300 transition-colors uppercase tracking-widest text-sm"
+        >
+          Odeslat poptávku
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

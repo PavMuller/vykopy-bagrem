@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Výkopy Liberecko | Zemní práce & inženýrské sítě Český Dub',
+  description = 'Profesionální výkopy, zemní práce a inženýrské sítě v Libereckém kraji. Minirypadlo CAT 302.5. Český Dub a okolí. Poptávka zdarma.',
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="bg-dark text-white antialiased">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" fill="none">
+  <!-- Background -->
+  <rect width="260" height="72" rx="6" fill="#111111"/>
+
+  <!-- === EXCAVATOR SILHOUETTE === -->
+
+  <!-- Tracks (undercarriage) -->
+  <rect x="4" y="50" width="42" height="13" rx="6.5" fill="#FACC15"/>
+  <circle cx="10" cy="56.5" r="4.5" fill="#111111"/>
+  <circle cx="40" cy="56.5" r="4.5" fill="#111111"/>
+  <rect x="12" y="53" width="24" height="7" rx="1" fill="#D4A800"/>
+
+  <!-- Upper body / cab base -->
+  <rect x="8" y="30" width="26" height="22" rx="3" fill="#FACC15"/>
+
+  <!-- Cab window -->
+  <rect x="10" y="32" width="12" height="12" rx="2" fill="#1a1a1a"/>
+  <line x1="16" y1="32" x2="16" y2="44" stroke="#FACC15" stroke-width="0.8" stroke-opacity="0.4"/>
+
+  <!-- Counterweight (rear) -->
+  <rect x="6" y="38" width="5" height="12" rx="2" fill="#D4A800"/>
+
+  <!-- Boom arm (diagonal, going up-right) -->
+  <rect x="30" y="10" width="6" height="28" rx="3"
+        transform="rotate(-30 33 24)" fill="#FACC15"/>
+
+  <!-- Stick (lower arm) -->
+  <rect x="42" y="20" width="5" height="20" rx="2.5"
+        transform="rotate(20 44.5 30)" fill="#FACC15"/>
+
+  <!-- Bucket -->
+  <path d="M48 34 L62 28 L65 40 L51 46 Z" fill="#FACC15"/>
+  <path d="M51 46 L65 40 L63 46 L49 52 Z" fill="#D4A800"/>
+
+  <!-- Pin details on boom -->
+  <circle cx="33" cy="16" r="2" fill="#D4A800"/>
+  <circle cx="40" cy="30" r="2" fill="#D4A800"/>
+  <circle cx="48" cy="38" r="2" fill="#D4A800"/>
+
+  <!-- === DIVIDER === -->
+  <line x1="74" y1="12" x2="74" y2="60" stroke="#FACC15" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- === TEXT === -->
+  <text x="84" y="40" font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="22" font-weight="900" fill="#FACC15" letter-spacing="0.5">VÝKOPY</text>
+  <text x="85" y="57" font-family="Arial, Helvetica, sans-serif"
+        font-size="12" fill="#ffffff" letter-spacing="4" font-weight="400">LIBERECKO</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "heading": "Naše technika —",
+  "heading_accent": "CAT 302.5",
+  "desc": "Pracujeme s minirypadlem Caterpillar 302.5 — precizní, výkonný a kompaktní stroj, který se dostane tam, kam velká technika nemá šanci. Ideální pro výkopy v zahradách, úzkých uličkách, dvorech i v centru měst bez poškození okolí.",
+  "specs": [
+    { "label": "Provozní hmotnost", "value": "2 540 kg" },
+    { "label": "Výkon motoru", "value": "13,2 kW" },
+    { "label": "Max. hloubka výkopu", "value": "2 260 mm" },
+    { "label": "Transportní šířka", "value": "980 mm" }
+  ]
+}

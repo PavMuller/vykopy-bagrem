@@ -1,0 +1,29 @@
+---
+import data from '../content/services.json';
+---
+<section id="sluzby" class="py-24 bg-zinc-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-black uppercase">
+        {data.heading}<span class="text-accent"> {data.heading_accent}</span>
+      </h2>
+      <div class="mt-4 w-16 h-1 bg-accent mx-auto"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {data.items.map((item) => (
+        <div class="group bg-dark border border-white/10 rounded-xl p-7 hover:border-accent/60 transition-all duration-300 hover:-translate-y-1">
+          <div class="w-12 h-12 bg-accent/10 border border-accent/20 rounded-lg flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d={item.icon} />
+            </svg>
+          </div>
+          <h3 class="font-black text-lg mb-3 text-white group-hover:text-accent transition-colors leading-snug">
+            {item.title}
+          </h3>
+          <p class="text-white/55 text-sm leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

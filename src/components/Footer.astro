@@ -1,0 +1,27 @@
+---
+import data from '../content/contact.json';
+const year = new Date().getFullYear();
+---
+<footer class="bg-zinc-950 border-t border-white/10 py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <a href="/" class="flex items-center">
+        <img src="/logo.svg" alt="Výkopy Liberecko" class="h-9 w-auto" />
+      </a>
+
+      <p class="text-white/30 text-sm text-center">
+        © {year} Výkopy Liberecko &nbsp;·&nbsp; {data.location}
+      </p>
+
+      <div class="flex items-center gap-6 text-sm">
+        <a href={`tel:${data.phone.replace(/\s/g, '')}`} class="text-white/40 hover:text-accent transition-colors">
+          {data.phone}
+        </a>
+        <a href={`mailto:${data.email}`} class="text-white/40 hover:text-accent transition-colors">
+          {data.email}
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

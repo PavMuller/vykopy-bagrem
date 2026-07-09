@@ -1,0 +1,55 @@
+---
+import data from '../content/hero.json';
+---
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background image from Pexels (free to use) -->
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('https://images.pexels.com/photos/2449603/pexels-photo-2449603.jpeg?auto=compress&cs=tinysrgb&w=1920')"
+  ></div>
+
+  <!-- Dark overlay with yellow tint at bottom -->
+  <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/60 to-dark/90"></div>
+
+  <!-- Yellow accent stripe at bottom -->
+  <div class="absolute bottom-0 left-0 right-0 h-1 bg-accent"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-16">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-1.5 mb-8">
+      <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+      <span class="text-accent text-sm font-bold tracking-wider uppercase">Český Dub · Liberecko</span>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase leading-tight mb-6">
+      {data.heading}<br/><span class="text-accent"> {data.heading_accent}</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed">
+      {data.subheading}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href={data.cta_href}
+        class="inline-block bg-accent text-dark font-black text-base px-10 py-4 rounded hover:bg-yellow-300 transition-colors uppercase tracking-widest"
+      >
+        {data.cta}
+      </a>
+      <a
+        href="tel:+420XXXXXXXXX"
+        class="inline-block border border-white/30 text-white font-bold text-base px-10 py-4 rounded hover:border-accent hover:text-accent transition-colors"
+      >
+        Zavolat
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll arrow -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 animate-bounce">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</section>
